@@ -85,4 +85,15 @@ BEGIN
         PRINT "New Number (y/n)? "
         READ playAgain
 
+  // Error Check: Basic validation for y/n response // 
+        WHILE playAgain != "Y" AND playAgain != "y" AND playAgain != "N" AND playAgain != "n" DO
+            PRINT "Invalid input. Please enter Y or N: "
+            READ playAgain
+        END WHILE
+    END WHILE
+
+    PRINT "Bye!"
+END
+
+--- Task #5 --- 
 
