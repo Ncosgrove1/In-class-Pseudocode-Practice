@@ -110,5 +110,11 @@ FUNCTION determine_left_right:
         current_number = GENERATE_RANDOM_INTEGER(1, 100)
         remainder = current_number MODULUS 2
 
-
+// Check if the remainder after dividing by 2 is 0 // 
+        IF remainder IS EQUAL TO 0 THEN
+            PRINT current_number + " – Output: 'RIGHT'"
+            INCREMENT right_count BY 1
+        ELSE
+            PRINT current_number + " – Output: 'LEFT'"
+            INCREMENT left_count BY 1
 
