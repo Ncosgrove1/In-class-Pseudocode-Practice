@@ -18,7 +18,7 @@ ENDIF
 
 --- Task 2 --- 
 
-FUNCTION get_valid_number(prompt_text)
-    LOOP
-        DISPLAY prompt_text
-        INPUT user_input
+FUNCTION get_number(prompt)
+    WHILE true:
+        PRINT prompt
+        READ input
