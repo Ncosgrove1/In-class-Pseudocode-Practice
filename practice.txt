@@ -1,0 +1,8 @@
+--- Task #1 --- 
+
+    DISPLAY "Enter a phrase:"
+    INPUT user_phrase
+
+     IF user_phrase is EMPTY THEN
+     DISPLAY "Error: No input provided."
+     EXIT
