@@ -32,3 +32,10 @@ START
 END
 
 --- Task #3 --- 
+
+ SET totalSum = 0
+    SET continueInput = "y"
+
+    WHILE continueInput is "y" or "Y" DO
+        PRINT "Number: "
+        GET userInput
