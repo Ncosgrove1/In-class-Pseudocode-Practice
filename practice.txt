@@ -1,12 +1,19 @@
 --- Task #1 --- 
 
-    OUTPUT "Please enter a phrase: "
-    INPUT userPhrase
-    
-    // Error Checking: Handle empty input
-    IF LENGTH(userPhrase) == 0 THEN
-        OUTPUT "Error: No input provided."
-        EXIT
-    ENDIF
+DECLARE userInput : STRING
+DECLARE result : STRING
 
-    DECLARE resultString AS STRING = ""
+DISPLAY "Please enter a phrase: "
+INPUT userInput
+
+// Error Checking: Check if input is empty
+IF LENGTH(userInput) == 0 THEN
+    DISPLAY "Error: No input provided."
+ELSE
+    // Convert to uppercase using a built-in function
+    result ← UCASE(userInput)
+    DISPLAY "Output: ", result
+ENDIF
+--- (under the assumption that .upper() or toUpperCase() is used) ---
+
+--- Task 2 --- 
