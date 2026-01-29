@@ -118,3 +118,10 @@ FUNCTION determine_left_right:
             PRINT current_number + " – Output: 'LEFT'"
             INCREMENT left_count BY 1
 
+END IF
+    END FOR
+
+    // Print the final counts // 
+    PRINT "Output: 'Left: " + left_count + "'"
+    PRINT "Output: 'Right: " + right_count + "'"
+END FUNCTION
