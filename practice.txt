@@ -1,8 +1,12 @@
 --- Task #1 --- 
 
-    DISPLAY "Enter a phrase:"
-    INPUT user_phrase
+    OUTPUT "Please enter a phrase: "
+    INPUT userPhrase
+    
+    // Error Checking: Handle empty input
+    IF LENGTH(userPhrase) == 0 THEN
+        OUTPUT "Error: No input provided."
+        EXIT
+    ENDIF
 
-     IF user_phrase is EMPTY THEN
-     DISPLAY "Error: No input provided."
-     EXIT
+    DECLARE resultString AS STRING = ""
