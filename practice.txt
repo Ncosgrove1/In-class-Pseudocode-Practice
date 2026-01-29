@@ -6,11 +6,11 @@ DECLARE result : STRING
 DISPLAY "Please enter a phrase: "
 INPUT userInput
 
-// Error Checking: Check if input is empty
+// Error Checking: Check if input is empty //
 IF LENGTH(userInput) == 0 THEN
     DISPLAY "Error: No input provided."
 ELSE
-    // Convert to uppercase using a built-in function
+    // Convert to uppercase using a built-in function // 
     result ← UCASE(userInput)
     DISPLAY "Output: ", result
 ENDIF
@@ -40,7 +40,7 @@ END
         PRINT "Number: "
         GET userInput
 
-    // Error Checking: Ensure the input is a valid number
+    // Error Checking: Ensure the input is a valid number // 
     IF userInput is numeric THEN
             totalSum = totalSum + userInput
     ELSE
@@ -51,7 +51,7 @@ END
     PRINT "Another number? (y/n)"
     GET continueInput
         
-    // Error Checking: Handle cases where user types something other than y/n
+    // Error Checking: Handle cases where user types something other than y/n //
     WHILE continueInput is NOT "y", "Y", "n", or "N" DO
             PRINT "Please enter 'y' for yes or 'n' for no."
             GET continueInput
@@ -59,3 +59,30 @@ END
     END WHILE
 
     PRINT "Output: " + totalSum
+
+--- Task #4 --- 
+
+BEGIN
+    SET playAgain = "Y"
+
+    WHILE playAgain == "Y" OR playAgain == "y" DO
+        PRINT "Max Number: "
+        READ userInput
+        
+        // Error Check: Ensure input is a valid positive integer //
+        IF userInput IS NOT numeric OR userInput < 0 THEN
+            PRINT "Error: Please enter a valid positive whole number."
+            CONTINUE // Skip to the next iteration of the loop
+        END IF
+
+        SET maxNum = CONVERT_TO_INT(userInput)
+        
+        // Generate random number (inclusive of 0 and maxNum)
+        SET result = RANDOM_INT(0, maxNum)
+        
+        PRINT "Output: " + result
+
+        PRINT "New Number (y/n)? "
+        READ playAgain
+
+
