@@ -97,3 +97,18 @@ END
 
 --- Task #5 --- 
 
+FUNCTION determine_left_right:
+    DECLARE left_count AS INTEGER = 0
+    DECLARE right_count AS INTEGER = 0
+    DECLARE iterations AS INTEGER = 10
+    DECLARE current_number AS INTEGER
+    DECLARE remainder AS INTEGER
+
+// Loop ten times to generate and process numbers // 
+    FOR i FROM 1 TO iterations:
+        // Generate a random integer, for example between 1 and 100, excluding 0 //
+        current_number = GENERATE_RANDOM_INTEGER(1, 100)
+        remainder = current_number MODULUS 2
+
+
+
