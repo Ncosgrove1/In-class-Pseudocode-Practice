@@ -47,3 +47,15 @@ END
         PRINT "Invalid entry. Please enter a numerical value."
         CONTINUE // Skip to the next iteration
     END IF
+
+    PRINT "Another number? (y/n)"
+    GET continueInput
+        
+    // Error Checking: Handle cases where user types something other than y/n
+    WHILE continueInput is NOT "y", "Y", "n", or "N" DO
+            PRINT "Please enter 'y' for yes or 'n' for no."
+            GET continueInput
+        END WHILE
+    END WHILE
+
+    PRINT "Output: " + totalSum
