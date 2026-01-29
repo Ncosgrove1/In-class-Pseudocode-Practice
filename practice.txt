@@ -16,9 +16,19 @@ ELSE
 ENDIF
 --- (under the assumption that .upper() or toUpperCase() is used) ---
 
---- Task 2 --- 
+--- Task #2 --- 
 
 FUNCTION get_number(prompt)
     WHILE true:
         PRINT prompt
         READ input
+        IF input is numeric THEN RETURN input
+        ELSE PRINT "Invalid input."
+
+START
+    num1 = get_number("Number 1: ")
+    num2 = get_number("Number 2: ")
+    PRINT "Output: " + (num1 + num2)
+END
+
+--- Task #3 --- 
