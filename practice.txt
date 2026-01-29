@@ -39,3 +39,11 @@ END
     WHILE continueInput is "y" or "Y" DO
         PRINT "Number: "
         GET userInput
+
+    // Error Checking: Ensure the input is a valid number
+    IF userInput is numeric THEN
+            totalSum = totalSum + userInput
+    ELSE
+        PRINT "Invalid entry. Please enter a numerical value."
+        CONTINUE // Skip to the next iteration
+    END IF
